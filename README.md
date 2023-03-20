@@ -1,4 +1,4 @@
-# *based*
+# *talewind*
 
 *based.ai* is a media bias detection system for text input. It is being developed by Anand Chauhan and Vasu Jain as part of their University project.
 
