@@ -1,9 +1,10 @@
 # *talewind*
 
-*talewind* is a media bias detection system for text input. It is being developed by Vasu Jain and Anand Chauhan as part of their University project.
+*talewind* is a media bias detection system for text input. It is being developed by Vasu Jain and Anand Chauhan as our University project for the 4th semester course on Artificial Intelligence, as part of our bachelor's degree.
+
+#### 29/04/2023: The whole thing will be rebuilt using better datasets and advanced models
 
 ## `COMPONENTS`
 
-### `POLITICAL CLASSIFICATION`
+- ### `POLITICAL CLASSIFICATION`
 
-The Political text classification system works off of an LSTM based on the [AllSides](https://www.allsides.com/media-bias/media-bias-chart) media bias chart as a dataset and metric.
