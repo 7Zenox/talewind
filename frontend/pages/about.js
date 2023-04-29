@@ -21,7 +21,7 @@ export default function Home() {
                     Welcome to News Analyzer AI, an innovative artificial intelligence platform designed to help you evaluate and understand the biases present in media and news articles. Our mission is to empower readers to make informed decisions and engage in critical thinking by providing a comprehensive, objective assessment of the content they consume daily.
                     <br />
                     <br />
-                    In today's world, information is at our fingertips, but not all of it is reliable or impartial. Our AI-driven project aims to detect and analyze biases in news articles, allowing users to gain a deeper understanding of the underlying perspectives and motivations driving the narrative. By leveraging advanced natural language processing and machine learning techniques, News Analyzer AI provides a valuable tool for individuals, researchers, and organizations seeking to make sense of the media landscape.
+                    In todays world, information is at our fingertips, but not all of it is reliable or impartial. Our AI-driven project aims to detect and analyze biases in news articles, allowing users to gain a deeper understanding of the underlying perspectives and motivations driving the narrative. By leveraging advanced natural language processing and machine learning techniques, News Analyzer AI provides a valuable tool for individuals, researchers, and organizations seeking to make sense of the media landscape.
 
                 </Text>
             </div>
