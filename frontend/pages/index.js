@@ -1,7 +1,7 @@
-import { Container, Grid, Spacer } from '@nextui-org/react'
+import { Container, Grid } from '@nextui-org/react'
+import { useState } from "react";
 import { } from '@nextui-org/react'
-
-import Typewriter from 'typewriter-effect'
+import { useSpring } from "@react-spring/core"
 
 import Siteheader from '../components/Siteheader'
 import Inputcard from '../components/Inputcard'

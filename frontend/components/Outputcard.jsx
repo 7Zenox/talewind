@@ -1,6 +1,5 @@
-import { Container, Text, Card, Row, Spacer, Grid, Progress, Pagination } from '@nextui-org/react'
-import { useEffect, useState } from 'react'
-
+import { Text, Card, Row, Spacer, Grid, Progress, Pagination } from '@nextui-org/react'
+import { useState } from 'react'
 
 export default function Outputcard() {
     const [pageNum, setPageNum] = useState(1);
@@ -9,7 +8,6 @@ export default function Outputcard() {
         <Card shadow style={{ padding: '20px' }} className='w-full h-full bg-transparent border-0'>
 
             {pageNum == 1 ? (
-
                 <Card.Body>
                     <Text className='text-4xl' css={{ textGradient: "45deg, $blue600, $pink600" }} style={{ fontFamily: "Century Gothic" }} > Your text is 49% left aligned </Text>
                     <Spacer y={2} />
@@ -33,7 +31,7 @@ export default function Outputcard() {
                 </Card.Body>
             ) : (
                 <Card.Body>
-
+                    <Text className='text-4xl' css={{ textGradient: "45deg, $blue600, $pink600" }} style={{ fontFamily: "Century Gothic" }} > Sentence-wise Analysis </Text>
                 </Card.Body>
             )
             }

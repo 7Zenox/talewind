@@ -11,14 +11,22 @@
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.12",
     "@prisma/client": "^4.13.0",
+    "@react-three/drei": "^9.66.1",
+    "@react-three/fiber": "^8.13.0",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "framer-motion": "^10.12.4",
+    "framer-motion-3d": "^10.12.4",
     "next": "13.3.0",
     "next-themes": "^0.2.1",
+    "popmotion": "^11.0.5",
     "react": "18.2.0",
     "react-animated-cursor": "^2.5.2",
     "react-dom": "18.2.0",
     "react-iconly": "^2.2.10",
+    "react-router-dom": "^6.11.0",
+    "react-spring": "^9.7.1",
+    "three": "^0.152.2",
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
