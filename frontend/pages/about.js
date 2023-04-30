@@ -1,9 +1,7 @@
 import { Container, Text, Spacer } from '@nextui-org/react'
 import { } from '@nextui-org/react'
-import { StrictMode } from "react";
-import * as ReactDOMClient from "react-dom/client";
 
-import Pxlbg from '../components/pxlbg/Pxlbg'
+import Pxlbg from '../components/Pxlbg'
 import Siteheader from '../components/Siteheader'
 
 export default function Home() {

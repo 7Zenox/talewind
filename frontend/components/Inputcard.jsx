@@ -1,24 +1,23 @@
 import { Card, Textarea, Row, Button } from '@nextui-org/react'
 import * as IconlyPack from 'react-iconly'
 
+import Tdbutton from "./tdbutton/Tdbutton";
+
 export default function Inputcard() {
     return (
-        <Card shadow css={{ w: "100%", h: "100%" }}>
+        <Card shadow className='w-100 h-100 overflow-visible'>
             <Card.Body css={{ p: 0 }}>
                 <Textarea
                     Placeholder="Insert your text here"
                     rows={23}
-                    style={{ backgroundColor: 'transparent', height: 'auto%', padding: '20px', }} />
+                    style={{ backgroundColor: 'transparent', height: 'auto%', padding: '30px' }} />
             </Card.Body>
 
-            <Card.Footer css={{ position: "absolute", bottom: 0, zIndex: 1 }}>
-                <Row justify="flex-end">
-                    <Button color="gradient" auto ghost fill="Gradient" css={{ bgBlur: "#0f111466" }}>
-                        <IconlyPack.ChevronRight set="broken" gradientColor="white" />
-                    </Button>
+            <Card.Footer className="flex absolute bottom-0 overflow-visible">
+                <Row justify='flex-end'>
+                    <Tdbutton />
                 </Row>
             </Card.Footer>
-
         </Card>
     )
 }
