@@ -4,7 +4,6 @@ import Switcher from './Switcher';
 import Typewriter from 'typewriter-effect'
 
 export default function SiteHeader() {
-
     return (
         <>
             <Navbar isCompact disableShadow>
