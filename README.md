@@ -17,7 +17,9 @@
 
     The 7 types of biases we aim to identify are:
 
-        - 'Content Bias', 'Partisan Bias', 'False balance',
+        - Content Bias
+        - Partisan Bias
+        - False balance
         - Ventriloquism
         - Demographic bias
         - Undue Weight 
@@ -25,9 +27,15 @@
 
 * ### `State-of-the-art Transformer-based Embeddings`
 
-    We use a custom architecture for multilabelled classification of the biases.
+    We use a custom architecture for multilabelled classification of the biases, with a sentence transformer as the base of all sentence embeddings. The transformer in question can be found [here](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2).
+
+* ### `Synthetic Data`
+
+    As previously mentioned, we had to generate a dataset using LLMs for this project. We ended up with over 1800 rows, which is nearly not enough to be a widely-applicable model. However, the model provides decent enough results for a proof-of-concept, and with enough data, should easily be able to reliably output accurate information.
 
 ## `MISC Notes`
 
-While training the model, Use the following while in the root folder of the project to show tensorboard metrics.
-`tensorboard --logdir ./AI/logs/fit`
+* While training the model, Use the following commmand while in the root folder of the project to show tensorboard metrics.
+        ```tensorboard --logdir ./AI/logs/fit```
+
+* The requirements to run the backend can be found inside [this folder](./backend/). (NOT ADDED AS OF 02/05/2023).
