@@ -5,12 +5,12 @@ import Tdbutton from "./tdbutton/Tdbutton";
 
 export default function Inputcard() {
     return (
-        <Card shadow className='w-100 h-100 overflow-visible'>
+        <Card shadow className='w-full h-full overflow-visible'>
             <Card.Body css={{ p: 0 }}>
                 <Textarea
                     Placeholder="Insert your text here"
-                    rows={23}
-                    style={{ backgroundColor: 'transparent', height: 'auto%', padding: '30px' }} />
+                    rows={20}
+                    style={{ height: 'auto%', padding: '30px', marginBottom: '70px' }} />
             </Card.Body>
 
             <Card.Footer className="flex absolute bottom-0 overflow-visible">

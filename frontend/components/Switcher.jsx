@@ -8,6 +8,8 @@ export default function Switcher() {
   const { setTheme } = useNextTheme();
   const { isDark, type } = useTheme();
 
+  console.log(useNextTheme().theme)
+
   return (
     <div>
       <Switch
