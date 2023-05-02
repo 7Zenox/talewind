@@ -38,4 +38,4 @@
 * While training the model, Use the following commmand while in the root folder of the project to show tensorboard metrics.
         ```tensorboard --logdir ./AI/logs/fit```
 
-* The requirements to run the backend can be found inside [this folder](./backend/). (NOT ADDED AS OF 02/05/2023).
+* The requirements to run the backend can be found inside [this folder](./backend/).
