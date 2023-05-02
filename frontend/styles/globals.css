@@ -36,6 +36,12 @@ html {
   font-family: 'CrimsonText-Regular';
 }
 
+@font-face {
+  src: url('../public/fonts/Poppins-SemiBold.ttf');
+  font-family: 'Poppins';
+}
+
+
 /* Custom Scrollbar */
 *::-webkit-scrollbar,
 *::-webkit-scrollbar-thumb {
@@ -43,7 +49,7 @@ html {
   border-radius: 13px;
   background-clip: padding-box;
   border: 10px solid transparent;
-  }
+}
 
 *::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 0 10px;
@@ -88,12 +94,10 @@ button {
   right: -1px;
   bottom: -1px;
   border-radius: 60px;
-  background: linear-gradient(
-    60deg,
-    var(--blue) 0%,
-    #d6cbf6 30%,
-    var(--pink) 70%
-  );
+  background: linear-gradient(60deg,
+      var(--blue) 0%,
+      #d6cbf6 30%,
+      var(--pink) 70%);
 }
 
 .blush {
