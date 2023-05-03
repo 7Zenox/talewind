@@ -144,10 +144,10 @@ export default function Home() {
 
                         <Row justify responsive>
                             <Row>
-                                <code>&apos;Synthesize a dataset in plain text delimited by &apos;;&apos;. The dataset&apos;s header&apos;s are as follows:
+                                <code className='p-10'>&quot;Synthesize a dataset in plain text delimited by &apos;;&apos;. The dataset&apos;s header&apos;s are as follows:
                                     Sentence, Content Bias, Partisan Bias, False balance, Ventriloquism, Demographic bias, Undue Weight, Corporate
                                     <br /><br />
-                                    Fill the data by creating sentences from news media, articles and journalist writing pieces and sentences written inside articles. Generate long and short sentences and significantly vary the length of the sentences. Then fill the data with 1 or 0 in the following columns based on if the sentence has that bias present or not. Keep variance high in data. Also include sentences which have no bias at all. Do not use code block to generate the data. Generate as much data as possible."
+                                    Fill the data by creating sentences from news media, articles and journalist writing pieces and sentences written inside articles. Generate long and short sentences and significantly vary the length of the sentences. Then fill the data with 1 or 0 in the following columns based on if the sentence has that bias present or not. Keep variance high in data. Also include sentences which have no bias at all. Do not use code block to generate the data. Generate as much data as possible.&quot;
                                 </code>
                             </Row> <br />
                         </Row>
@@ -254,7 +254,7 @@ export default function Home() {
 
                         <Row justify responsive>
                             <Text className='text-lg' css={{ fontFamily: "monospace" }} >
-                                The Loss, Accuracy, Precision and Recall charts are shown below. The input data for these was the 384 dimensional embeddings for each sentence, as it is right now in production as well. As for how it works in the real world, We encourage you to try out our demo website. Click on "Home" to get started.
+                                The Loss, Accuracy, Precision and Recall charts are shown below. The input data for these was the 384 dimensional embeddings for each sentence, as it is right now in production as well. As for how it works in the real world, We encourage you to try out our demo website. Click on &quot;Home&quot; to get started.
                             </Text>
                         </Row>
 
