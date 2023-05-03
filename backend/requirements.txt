@@ -5,4 +5,4 @@ pydantic==1.8.2
 sentence_transformers==2.2.2
 spacy==3.5.2
 tensorflow==2.11.1
-uvicorn[standard]==0.22.0
+uvicorn==0.22.0
