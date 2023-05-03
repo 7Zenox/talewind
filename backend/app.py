@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request
 from ..AI.TalewindPredictor import TalewindPredictor
 
 app = FastAPI()
-predictor = TalewindPredictor(path_to_model="path/to/your/model")
+predictor = TalewindPredictor(path_to_model="../AI/models/Dense_NN_CURRENT-BEST_20230502-190500.h5")
 
 @app.post("/predict")
 async def predict(request: Request):
