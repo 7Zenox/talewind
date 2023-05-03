@@ -4,7 +4,7 @@ import { Shapes } from "./Shapes";
 import { transition } from "./Settings";
 import useMeasure from "react-use-measure";
 
-export default function Tdbutton() {
+export default function Tdbutton({ onClick }) {
   const [ref, bounds] = useMeasure({ scroll: false });
   const [isHover, setIsHover] = useState(false);
   const [isPress, setIsPress] = useState(false);
@@ -43,6 +43,7 @@ export default function Tdbutton() {
           mouseX.set(e.clientX - bounds.x - bounds.width / 2);
           mouseY.set(e.clientY - bounds.y - bounds.height / 2);
         }}
+        onClick={onClick} // Add onClick prop here
       >
         <motion.div
           className="shapes"

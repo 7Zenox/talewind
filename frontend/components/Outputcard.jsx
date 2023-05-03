@@ -1,21 +1,39 @@
-import { Text, Card, Row, Grid, Progress, Pagination } from '@nextui-org/react'
-import { useState } from 'react'
+import { Text, Card, Row, Grid, Progress, Pagination } from '@nextui-org/react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
-import Spacy from './Spacy'
-import biasValues from './biasValues.json';
-
-const {
-    contentBias,
-    corporateBias,
-    demographicBias,
-    falseBalance,
-    partisanBias,
-    undueWeight,
-    ventriloquism
-} = biasValues;
+import Spacy from './Spacy';
 
 export default function Outputcard() {
     const [pageNum, setPageNum] = useState(1);
+    const [contentBias, setContentBias] = useState(null);
+    const [corporateBias, setCorporateBias] = useState(null);
+    const [demographicBias, setDemographicBias] = useState(null);
+    const [falseBalance, setFalseBalance] = useState(null);
+    const [partisanBias, setPartisanBias] = useState(null);
+    const [undueWeight, setUndueWeight] = useState(null);
+    const [ventriloquism, setVentriloquism] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('YOUR_API_ENDPOINT');
+                const data = response.data;
+
+                setContentBias(data['individual bias percentages']['Content Bias']);
+                setCorporateBias(data['individual bias percentages']['Corporate Bias']);
+                setDemographicBias(data['individual bias percentages']['Demographic bias']);
+                setFalseBalance(data['individual bias percentages']['False balance']);
+                setPartisanBias(data['individual bias percentages']['Partisan Bias']);
+                setUndueWeight(data['individual bias percentages']['Undue Weight']);
+                setVentriloquism(data['individual bias percentages']['Ventriloquism']);
+            } catch (error) {
+                console.error('Error fetching data', error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     return (
         <Card isblurred shadow style={{ padding: '20px' }} className='w-full h-full bg-transparent border-0' css={{ bgBlur: "#0f111466" }}>
