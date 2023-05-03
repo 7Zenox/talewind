@@ -40,9 +40,7 @@
 
 * While training the model, Use the following commmand while in the root folder of the project to show tensorboard metrics.
 
-        ```bash
-        $ tensorboard --logdir ./AI/logs/fit
-        ```
+        tensorboard --logdir ./AI/logs/fit
 
 * The requirements to run the backend can be found inside [this folder](./backend/). [NEEDS UPDATE FOR DJANGO]
   
