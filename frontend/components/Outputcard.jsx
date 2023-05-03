@@ -16,31 +16,31 @@ export default function Outputcard({ result }) {
                     <Card.Body>
                         <Grid.Container gap={2} className='w-full h-full'>
                             <Grid className='w-full'>
-                                <Text size={17}>Content Bias</Text>
+                                <Text size={17}> {result.individualPercentages.contentBias == null ? "Content Bias" : "Content Bias: " + result.individualPercentages.contentBias + "%"} </Text> 
                                 <Progress color='gradient' value={result.individualPercentages.contentBias} indeterminated={result.individualPercentages.contentBias === null || result.individualPercentages.contentBias === undefined} />
                             </Grid>
                             <Grid className='w-1/2'>
-                                <Text size={17}>Corporate Bias</Text>
+                            <Text size={17}> {result.individualPercentages.corporateBias == null ? "Corporate Bias" : "Corporate Bias: " + result.individualPercentages.corporateBias + "%"} </Text> 
                                 <Progress color="gradient" value={result.individualPercentages.corporateBias} indeterminated={result.individualPercentages.corporateBias === null || result.individualPercentages.corporateBias === undefined} />
                             </Grid>
                             <Grid className='w-1/2'>
-                                <Text size={17}>Demographic Bias</Text>
+                            <Text size={17}> {result.individualPercentages.demographicBias == null ? "Demographic Bias" : "Demographic Bias: " + result.individualPercentages.demographicBias + "%"} </Text> 
                                 <Progress color="gradient" value={result.individualPercentages.demographicBias} indeterminated={result.individualPercentages.demographicBias === null || result.individualPercentages.demographicBias === undefined} />
                             </Grid>
                             <Grid className='w-1/2'>
-                                <Text size={17}>False Balance</Text>
+                            <Text size={17}> {result.individualPercentages.falseBalance == null ? "False Balance" : "False Balance: " + result.individualPercentages.falseBalance + "%"} </Text> 
                                 <Progress color="gradient" value={result.individualPercentages.falseBalance} indeterminated={result.individualPercentages.falseBalance === null || result.individualPercentages.falseBalance === undefined} />
                             </Grid>
                             <Grid className='w-1/2'>
-                                <Text size={17}>Partisan Bias</Text>
+                            <Text size={17}> {result.individualPercentages.partisanBias == null ? "Partisan Bias" : "Partisan Bias: " + result.individualPercentages.partisanBias + "%"} </Text> 
                                 <Progress color="gradient" value={result.individualPercentages.partisanBias} indeterminated={result.individualPercentages.partisanBias === null || result.individualPercentages.partisanBias === undefined} />
                             </Grid>
                             <Grid className='w-1/2'>
-                                <Text size={17}>Undue Weight</Text>
+                            <Text size={17}> {result.individualPercentages.undueWeight == null ? "Undue Weight" : "Undue Weight: " + result.individualPercentages.undueWeight + "%"} </Text> 
                                 <Progress color="gradient" value={result.individualPercentages.undueWeight} indeterminated={result.individualPercentages.undueWeight === null || result.individualPercentages.undueWeight === undefined} />
                             </Grid>
                             <Grid className='w-1/2'>
-                                <Text size={17}>Ventriloquism</Text>
+                            <Text size={17}> {result.individualPercentages.ventriloquism == null ? "Ventriloquism" : "Ventriloquism: " + result.individualPercentages.ventriloquism + "%"} </Text> 
                                 <Progress color="gradient" value={result.individualPercentages.ventriloquism} indeterminated={result.individualPercentages.ventriloquism === null || result.individualPercentages.ventriloquism === undefined} />
                             </Grid>
                         </Grid.Container>

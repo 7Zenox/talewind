@@ -23,7 +23,7 @@ export default function Home() {
                 <Container fluid className='w-full text-justify opacity-80' css={{ fontFamily: "monospace" }}>
                     <Col className='mb-40'>
                         <Row justify responsive>
-                            <Text className='text-lg' css={{ fontFamily: "monospace" }} >
+                            <Text className='text-lg' css={{ fontFamily: "monospace" }} > 
                                 Welcome to talewind - an aritifical intelligence tool for identifying and highlighting biases in journalistic writing. In a world where biased perspectives can distort the truth, our mission is to empower users with the tools they need to identify and mitigate these biases, fostering a more objective and balanced media landscape.
                             </Text>
                         </Row>
