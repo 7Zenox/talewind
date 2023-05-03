@@ -3,7 +3,7 @@ import { useRef, useLayoutEffect } from "react"
 import { useTransform, useScroll, useTime } from "framer-motion"
 import { degreesToRadians, progress, mix } from "popmotion"
 
-const color = "#ffffff"
+const color = "#808080"
 
 const Icosahedron = () => (
   <mesh rotation-x={0.35}>
@@ -72,7 +72,7 @@ function Scene({ numStars = 250 }) {
 
 export default function Pxlbg() {
   return (
-    <div className="fixed opacity-20 h-full w-full">
+    <div className="fixed opacity-40 h-full w-full">
       <Canvas gl={{ antialias: false }}>
         <Scene />
       </Canvas>
