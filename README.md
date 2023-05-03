@@ -18,13 +18,13 @@
 
     The 7 types of biases we aim to identify are:
 
-        - Content Bias
-        - Partisan Bias
-        - False balance
-        - Ventriloquism
-        - Demographic bias
-        - Undue Weight 
-        - Corporate Bias
+      - Content Bias
+      - Partisan Bias
+      - False balance
+      - Ventriloquism
+      - Demographic bias
+      - Undue Weight 
+      - Corporate Bias
 
     This is a multi-label classification task, as a sentence may contain more than one kind of bias.
 
