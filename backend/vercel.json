@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "fastapi-app",
+    "name": "talewind-fastapi",
     "builds": [
       {
         "src": "main.py",
@@ -14,8 +14,12 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "main.py"
+        "dest": "/"
+      },
+      {
+        "src": "/predict/(.*)",
+        "dest": "/predict"
       }
     ],
-    "regions": ["iad1"]
+    "regions": ["sin1"]
   }

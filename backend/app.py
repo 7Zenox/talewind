@@ -6,6 +6,7 @@ app = FastAPI()
 predictor = TalewindPredictor(path_to_model="../AI/models/Dense_NN_CURRENT-BEST_20230502-190500.h5",
                               color_path='../AI/colors.pkl')
 
+
 class JSONObject(BaseModel):
     query: str
     mode: str
