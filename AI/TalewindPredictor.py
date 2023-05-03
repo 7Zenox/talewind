@@ -12,13 +12,14 @@ class TalewindPredictor:
     this class contains the sentence transformer and the tensorflow model imported into one.
     """
 
-    def __init__(self, path_to_model: str):
+    def __init__(self, path_to_model: str, color_path: str = './AI/colors.pkl'):
         self.revEncode = np.array(['Content Bias', 'Partisan Bias', 'False balance', 'Ventriloquism',
                                    'Demographic bias', 'Undue Weight', 'Corporate Bias'])
         self.threshold = 0.74
         self.model_path = 'sentence-transformers/all-MiniLM-L6-v2'
         self.encoder = SentenceTransformer(self.model_path)
         self.bias_model = tf.keras.models.load_model(path_to_model)
+        self.color_path = color_path
     
     def predict_bias(self, text: str):
         sentarray = np.array(pkt().tokenize(text))
@@ -35,7 +36,7 @@ class TalewindPredictor:
         sentspan = spandict["render_span"]
         revEncode = np.array(['Content Bias', 'Partisan Bias', 'False balance', 'Ventriloquism',
                 'Demographic bias', 'Undue Weight', 'Corporate Bias'])
-        with open('./AI/colors.pkl', 'rb') as f:
+        with open(self.color_path, 'rb') as f:
             colors = pickle.load(f)
         f.close()
         options = {"colors" : colors}
