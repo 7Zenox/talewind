@@ -5,12 +5,28 @@ import Pxlbg from '@/components/Pxlbg';
 import Siteheader from '../components/Siteheader'
 import Inputcard from '../components/Inputcard'
 import Outputcard from '../components/Outputcard'
+import { useState } from 'react';
 
 export default function Home() {
+  const [result, setResult] = useState({
+    "totalPercentage": null,
+    "individualPercentages": {
+      "contentBias": null,
+      "partisanBias": null,
+      "falseBalance": null,
+      "ventriloquism": null,
+      "demographicBias": null,
+      "undueWeight": null,
+      "corporateBias": null
+    },
+    "html": null
+  })
+
   return (
+
     <div className='fixed h-full w-full'>
       <Pxlbg />
-      
+
       <Container className='pt-5 h-full items-center'>
         {/* NavBar */}
         <Siteheader />
@@ -20,12 +36,12 @@ export default function Home() {
 
           {/* Input */}
           <Grid xs={6} justify='center'>
-            <Inputcard />
+            <Inputcard setResult={setResult} />
           </Grid>
 
           {/* Output */}
           <Grid xs={6} justify='center'>
-            <Outputcard />
+            <Outputcard result={result} />
           </Grid>
 
         </Grid.Container>

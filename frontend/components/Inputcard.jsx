@@ -3,17 +3,19 @@ import Tdbutton from "./tdbutton/Tdbutton";
 import { useState } from 'react';
 import axios from 'axios';
 
-export default function Inputcard() {
+export default function Inputcard({setResult}) {
     const [textAreaValue, setTextAreaValue] = useState("");
 
     const handleButtonClick = async () => {
         try {
-            const response = await axios.post('YOUR_API_ENDPOINT', {
-                text: textAreaValue,
+            const response = await axios.post('http://localhost:3030/predict', {
+                query: textAreaValue,
+                mode: 'span'
             });
 
             if (response.status === 200) {
                 console.log('Data successfully sent');
+                setResult(response.data);
             } else {
                 console.error('Error sending data');
             }
