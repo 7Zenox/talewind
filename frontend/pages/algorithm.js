@@ -47,7 +47,7 @@ export default function Home() {
                                     <Col>
                                         <Card >
                                             <Card.Body className='justify-center'>
-                                                <Text h6 size={15} color="white" className='flex justify-center'>
+                                                <Text h6 size={15} className='flex justify-center'>
                                                     Content Bias
                                                 </Text>
                                             </Card.Body>
@@ -56,7 +56,7 @@ export default function Home() {
                                     <Col>
                                         <Card>
                                             <Card.Body>
-                                                <Text h6 size={15} color="white" className='flex justify-center'>
+                                                <Text h6 size={15} className='flex justify-center'>
                                                     Partisan Bias
                                                 </Text>
                                             </Card.Body>
@@ -68,7 +68,7 @@ export default function Home() {
                                     <Col>
                                         <Card>
                                             <Card.Body>
-                                                <Text h6 size={15} color="white" className='flex justify-center'>
+                                                <Text h6 size={15} className='flex justify-center'>
                                                     False Balance
                                                 </Text>
                                             </Card.Body>
@@ -77,7 +77,7 @@ export default function Home() {
                                     <Col>
                                         <Card>
                                             <Card.Body>
-                                                <Text h6 size={15} color="white" className='flex justify-center'>
+                                                <Text h6 size={15} className='flex justify-center'>
                                                     Ventriloquism
                                                 </Text>
                                             </Card.Body>
@@ -86,7 +86,7 @@ export default function Home() {
                                     <Col>
                                         <Card>
                                             <Card.Body>
-                                                <Text h6 size={15} color="white" className='flex justify-center'>
+                                                <Text h6 size={15} className='flex justify-center'>
                                                     Demographic Bias
                                                 </Text>
                                             </Card.Body>
@@ -99,7 +99,7 @@ export default function Home() {
                                     <Col>
                                         <Card>
                                             <Card.Body>
-                                                <Text h6 size={15} color="white" className='flex justify-center'>
+                                                <Text h6 size={15} className='flex justify-center'>
                                                     Undue Weight
                                                 </Text>
                                             </Card.Body>
@@ -108,7 +108,7 @@ export default function Home() {
                                     <Col>
                                         <Card>
                                             <Card.Body>
-                                                <Text h6 size={15} color="white" className='flex justify-center'>
+                                                <Text h6 size={15} className='flex justify-center'>
                                                     Corporate Bias
                                                 </Text>
                                             </Card.Body>
