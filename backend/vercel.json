@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "name": "fastapi-app",
+    "builds": [
+      {
+        "src": "main.py",
+        "use": "@vercel/python",
+        "config": {
+          "entrypoint": "app:app",
+          "requirementsTxtPath": "requirements.txt"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "main.py"
+      }
+    ],
+    "regions": ["iad1"]
+  }
