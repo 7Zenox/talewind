@@ -1,5 +1,4 @@
 import pickle
-import json
 import numpy as np
 import tensorflow as tf
 import spacy
@@ -34,8 +33,10 @@ class TalewindPredictor:
         idxs = np.where(np.any(spandict["predict"] > self.threshold, axis=1))[0]
         text = spandict["text"]
         sentspan = spandict["render_span"]
-        revEncode = np.array(['Content Bias', 'Partisan Bias', 'False balance', 'Ventriloquism',
-                'Demographic bias', 'Undue Weight', 'Corporate Bias'])
+        revEncode = np.array(['Content Bias', 'Partisan Bias', 'False Balance', 'Ventriloquism',
+                'Demographic Bias', 'Undue Weight', 'Corporate Bias'])
+        jsonlabels = np.array(['contentBias', 'partisanBias', 'falseBalance', 'ventriloquism',
+                'demographicBias', 'undueWeight', 'corporateBias'])
         with open(self.color_path, 'rb') as f:
             colors = pickle.load(f)
         f.close()
@@ -62,8 +63,8 @@ class TalewindPredictor:
         weights = np.sum((np.ceil(spandict["predict"][idxs] - self.threshold)), axis=0)
         percentages = (np.ceil(((weights / spandict["predict"].shape[0])*100)).astype(int)).tolist()
         total_bias_percentage = int(np.ceil(((idxs.shape[0] / spandict["predict"].shape[0])*100)).item())
-        return {"total bias percentage" : total_bias_percentage, 
-                "individual bias percentages" : dict(zip(revEncode, percentages)), 
+        return {"totalPercentage" : total_bias_percentage, 
+                "individualPercentages" : dict(zip(jsonlabels, percentages)), 
                 "html" : html}
     
     def __call__(self, query: str, mode: str):
