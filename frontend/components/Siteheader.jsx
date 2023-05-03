@@ -6,8 +6,8 @@ import Typewriter from 'typewriter-effect'
 export default function SiteHeader() {
     return (
         <>
-            <Navbar isCompact disableShadow>
-                <Navbar.Content enableCursorHighlight>
+            <Navbar isCompact disableShadow variant='sticky'>
+                <Navbar.Content>
                     <Navbar.Link href="/">Home</Navbar.Link>
                     <Navbar.Link href="/about">About</Navbar.Link>
                     <Navbar.Link href="/privacy">Privacy</Navbar.Link>
@@ -17,7 +17,7 @@ export default function SiteHeader() {
                     <Text b className="text-4xl" css={{ fontFamily: "NakoneStencilItalic" }}> talewind </Text>
                 </Navbar.Content>
 
-                <Navbar.Content enableCursorHighlight>
+                <Navbar.Content>
                     <Navbar.Link href="/algorithm">Algorithm</Navbar.Link>
                     <Switcher />
                 </Navbar.Content>
