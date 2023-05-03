@@ -1,10 +1,10 @@
-from typing import Any
+import pickle
+import json
 import numpy as np
 import tensorflow as tf
 import spacy
 from sentence_transformers import SentenceTransformer
 from nltk.tokenize import PunktSentenceTokenizer as pkt
-
 
 class TalewindPredictor:
     """
@@ -35,14 +35,17 @@ class TalewindPredictor:
         sentspan = spandict["render_span"]
         revEncode = np.array(['Content Bias', 'Partisan Bias', 'False balance', 'Ventriloquism',
                 'Demographic bias', 'Undue Weight', 'Corporate Bias'])
-        options = {"color" : "blue"}
+        with open('./AI/colors.pkl', 'rb') as f:
+            colors = pickle.load(f)
+        f.close()
+        options = {"colors" : colors}
         ### SPAN ###
         if mode == "span":
             nlp = spacy.blank("en")
             doc = nlp(text)
             doc.spans["sc"] = []
             for i in idxs:
-                Labels = ',\n'.join(revEncode[spandict["predict"][i] > self.threshold])
+                Labels = ', '.join(revEncode[spandict["predict"][i] > self.threshold])
                 doc.spans["sc"].append(doc.char_span(sentspan[i][0], sentspan[i][1], Labels))
             html = spacy.displacy.render(doc, style="span", page=False, minify=False, jupyter=isJupyter, options=options)
         ### ENT ###
@@ -51,13 +54,13 @@ class TalewindPredictor:
                 "ents": [],
                 "title": None}
             for i in idxs:
-                Labels = ',\n'.join(revEncode[spandict["predict"][i] > self.threshold])
+                Labels = ', '.join(revEncode[spandict["predict"][i] > self.threshold])
                 ex["ents"].append({"start" : sentspan[i][0], "end" : sentspan[i][1], "label" : Labels})
             html = spacy.displacy.render(ex, style="ent", manual=True, page=False, minify=False, jupyter=isJupyter, options=options)
         ### FINAL RESULT ###
-        weights = np.sum((np.ceil(spandict["predict"][idxs] - self.threshold)), axis=0).astype(int)
-        percentages = (weights / spandict["predict"].shape[0])*100
-        total_bias_percentage = (idxs.shape[0] / spandict["predict"].shape[0])*100
+        weights = np.sum((np.ceil(spandict["predict"][idxs] - self.threshold)), axis=0)
+        percentages = (np.ceil(((weights / spandict["predict"].shape[0])*100)).astype(int)).tolist()
+        total_bias_percentage = int(np.ceil(((idxs.shape[0] / spandict["predict"].shape[0])*100)).item())
         return {"total bias percentage" : total_bias_percentage, 
                 "individual bias percentages" : dict(zip(revEncode, percentages)), 
                 "html" : html}
@@ -78,4 +81,5 @@ Oh yes, and I am fully aware that the Jam and Mogworld audiobooks have disappear
 Existentially Challenged is now available from Audible.com. You can click here to get it or on the image above if you couldn't wait this long.
 """
     predictor = TalewindPredictor(path)
-    print(predictor(text, "ent"))
+    print(predictor(text, "span"))
+    print("TEST SUCCESS")
