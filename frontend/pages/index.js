@@ -10,6 +10,7 @@ export default function Home() {
   return (
     <div className='fixed h-full w-full'>
       <Pxlbg />
+      
       <Container className='pt-5 h-full items-center'>
         {/* NavBar */}
         <Siteheader />
