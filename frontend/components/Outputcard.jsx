@@ -18,12 +18,12 @@ export default function Outputcard() {
     const [pageNum, setPageNum] = useState(1);
 
     return (
-        <Card shadow style={{ padding: '20px' }} className='w-full h-full bg-transparent border-0'>
+        <Card isblurred shadow style={{ padding: '20px' }} className='w-full h-full bg-transparent border-0' css={{ bgBlur: "#0f111466" }}>
 
             {pageNum == 1 ? (
                 <>
                     <Card.Header>
-                        <Text className='text-4xl' css={{ textGradient: "45deg, $blue600, $pink600", paddingBottom: '5px' }} style={{ fontFamily: "Century Gothic" }} > Your text is 49% left aligned </Text>
+                        <Text className='text-4xl' css={{ textGradient: "45deg, $blue600, $pink600", paddingBottom: '5px' }} style={{ fontFamily: "Century Gothic" }} > 49% of your text may be biased </Text>
                     </Card.Header>
 
                     <Card.Body>
@@ -64,7 +64,7 @@ export default function Outputcard() {
                     <Card.Header>
                         <Text className='text-4xl' css={{ textGradient: "45deg, $blue600, $pink600" }} style={{ fontFamily: "Century Gothic" }} > Sentence-wise Analysis </Text>
                     </Card.Header>
-                    <Card.Body css={{ p: 0 }} className='overflow-scroll h-10'>
+                    <Card.Body css={{ p: 0 }} className='overflow-scroll h-10 p-5'>
                         <Spacy />
                     </Card.Body>
                 </>
