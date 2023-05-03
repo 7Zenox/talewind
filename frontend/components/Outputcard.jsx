@@ -1,24 +1,21 @@
-import { Text, Card, Row, Spacer, Grid, Progress, Pagination } from '@nextui-org/react'
+import { Text, Card, Row, Grid, Progress, Pagination } from '@nextui-org/react'
 import { useState } from 'react'
 
-import Radar from './Radar'
 import Spacy from './Spacy'
-// import dynamic from 'next/dynamic'
+import biasValues from './biasValues.json';
 
-// const PlotlyGraph = dynamic(
-//     () =>
-//         import(
-//             './Radar'
-//         ),
-//     {
-//         ssr: false,
-//         loading: () => <>Loading...</>,
-//     },
-// );
+const {
+    contentBias,
+    corporateBias,
+    demographicBias,
+    falseBalance,
+    partisanBias,
+    undueWeight,
+    ventriloquism
+} = biasValues;
 
 export default function Outputcard() {
     const [pageNum, setPageNum] = useState(1);
-
 
     return (
         <Card shadow style={{ padding: '20px' }} className='w-full h-full bg-transparent border-0'>
@@ -26,12 +23,40 @@ export default function Outputcard() {
             {pageNum == 1 ? (
                 <>
                     <Card.Header>
-                        <Text className='text-4xl' css={{ textGradient: "45deg, $blue600, $pink600" }} style={{ fontFamily: "Century Gothic" }} > Your text is 49% left aligned </Text>
-                        <Spacer y={2} />
+                        <Text className='text-4xl' css={{ textGradient: "45deg, $blue600, $pink600", paddingBottom: '5px' }} style={{ fontFamily: "Century Gothic" }} > Your text is 49% left aligned </Text>
                     </Card.Header>
 
                     <Card.Body>
-                        {/* <Radar /> */}
+                        <Grid.Container gap={2} className='w-full h-full'>
+                            <Grid className='w-full'>
+                                <Text size={17}>Content Bias</Text>
+                                <Progress color='gradient' value={contentBias} indeterminated={contentBias === null || contentBias === undefined} />
+                            </Grid>
+                            <Grid className='w-1/2'>
+                                <Text size={17}>Corporate Bias</Text>
+                                <Progress color="gradient" value={corporateBias} indeterminated={corporateBias === null || corporateBias === undefined} />
+                            </Grid>
+                            <Grid className='w-1/2'>
+                                <Text size={17}>Demographic Bias</Text>
+                                <Progress color="gradient" value={demographicBias} indeterminated={demographicBias === null || demographicBias === undefined} />
+                            </Grid>
+                            <Grid className='w-1/2'>
+                                <Text size={17}>False Balance</Text>
+                                <Progress color="gradient" value={falseBalance} indeterminated={falseBalance === null || falseBalance === undefined} />
+                            </Grid>
+                            <Grid className='w-1/2'>
+                                <Text size={17}>Partisan Bias</Text>
+                                <Progress color="gradient" value={partisanBias} indeterminated={partisanBias === null || partisanBias === undefined} />
+                            </Grid>
+                            <Grid className='w-1/2'>
+                                <Text size={17}>Undue Weight</Text>
+                                <Progress color="gradient" value={undueWeight} indeterminated={undueWeight === null || undueWeight === undefined} />
+                            </Grid>
+                            <Grid className='w-1/2'>
+                                <Text size={17}>Ventriloquism</Text>
+                                <Progress color="gradient" value={ventriloquism} indeterminated={ventriloquism === null || ventriloquism === undefined} />
+                            </Grid>
+                        </Grid.Container>
                     </Card.Body>
                 </>
             ) : (

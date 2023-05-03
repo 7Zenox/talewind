@@ -1,0 +1,9 @@
+{
+    "contentBias": 50,
+    "corporateBias": 10,
+    "demographicBias": 20,
+    "falseBalance": 15,
+    "partisanBias": 40,
+    "undueWeight": 43,
+    "ventriloquism": 75
+}
