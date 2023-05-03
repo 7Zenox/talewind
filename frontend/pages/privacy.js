@@ -109,7 +109,7 @@ export default function Home() {
 
                         <Row justify responsive>
                             <Text className='text-lg' css={{ fontFamily: "monospace" }} >
-                                We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or for other reasons. We will notify you of any significant changes by posting the updated policy on our platform with a revised "Last updated" date. Your continued use of the Talewind platform following any updates constitutes your acceptance of the updated Privacy Policy.
+                                We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or for other reasons. We will notify you of any significant changes by posting the updated policy on our platform with a revised &apos;Last updated&apos; date. Your continued use of the Talewind platform following any updates constitutes your acceptance of the updated Privacy Policy.
                             </Text>
                         </Row>
 

@@ -67,7 +67,7 @@ export default function Home() {
                                     <li>Accuracy: Our team is committed to continuous improvement of our AI model, ensuring it stays up-to-date and provides the most accurate bias analysis possible. </li>
                                 </Row> <br />
                                 <Row>
-                                    <li>Objectivity: We're dedicated to promoting the importance of objective journalism and supporting our users in their quest for fair, balanced reporting. </li>
+                                    <li>Objectivity: We arere dedicated to promoting the importance of objective journalism and supporting our users in their quest for fair, balanced reporting. </li>
                                 </Row> <br />
                                 <Row>
                                     <li>Collaboration: We believe that working together and fostering a collaborative environment is the key to success. Our team members come from diverse backgrounds, bringing unique perspectives and skills to the table. </li>
@@ -89,7 +89,7 @@ export default function Home() {
 
                         <Row justify responsive>
                             <Text className='text-lg' css={{ fontFamily: "monospace" }} >
-                                talewind's AI model processes users' journalistic writing pieces and provides an in-depth analysis, identifying 7 types of biases. The analysis includes percentage values for each bias type and sentence-wise highlighting, enabling users to easily pinpoint and address the issues in their work.
+                                talewind&apos;s AI model processes users&apos; journalistic writing pieces and provides an in-depth analysis, identifying 7 types of biases. The analysis includes percentage values for each bias type and sentence-wise highlighting, enabling users to easily pinpoint and address the issues in their work.
                             </Text>
                         </Row>
 
@@ -105,7 +105,7 @@ export default function Home() {
                             <Text className='text-lg' css={{ fontFamily: "monospace" }} >
                                 The talewind team consists of experts in the fields of artificial intelligence and linguistics. We are passionate about creating a more balanced media environment and harnessing the power of AI to achieve this goal.
                                 <br /> <br />
-                                Together, we're working tirelessly to enhance and expand the capabilities of talewind, providing users with the most reliable and effective tools for bias identification and mitigation. Join us in our mission to illuminate truths and uncover biases, paving the way for a more objective and fair media landscape.
+                                Together, we&apos;re working tirelessly to enhance and expand the capabilities of talewind, providing users with the most reliable and effective tools for bias identification and mitigation. Join us in our mission to illuminate truths and uncover biases, paving the way for a more objective and fair media landscape.
                             </Text>
                         </Row>
                     </Col>
