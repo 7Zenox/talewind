@@ -19,7 +19,7 @@ export default function Home() {
       "undueWeight": null,
       "corporateBias": null
     },
-    "html": null
+    "html": "Sentence-wise Analysis will show up here."
   })
 
   return (
