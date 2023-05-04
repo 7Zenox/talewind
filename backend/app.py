@@ -8,26 +8,30 @@ predictor = TalewindPredictor(path_to_model="../AI/models/Dense_NN_CURRENT-BEST_
                               color_path='../AI/colors.pkl')
 
 print("""                                                                                                                                                    
-                                                                                                                                               dddddddd
-TTTTTTTTTTTTTTTTTTTTTTT                lllllll                                                              iiii                               d::::::d
-T:::::::::::::::::::::T                l:::::l                                                             i::::i                              d::::::d
-T:::::::::::::::::::::T                l:::::l                                                              iiii                               d::::::d
-T:::::TT:::::::TT:::::T                l:::::l                                                                                                 d:::::d 
-TTTTTT  T:::::T  TTTTTTaaaaaaaaaaaaa    l::::l     eeeeeeeeeeee  wwwwwww           wwwww           wwwwwwwiiiiiiinnnn  nnnnnnnn        ddddddddd:::::d 
-        T:::::T        a::::::::::::a   l::::l   ee::::::::::::ee w:::::w         w:::::w         w:::::w i:::::in:::nn::::::::nn    dd::::::::::::::d 
-        T:::::T        aaaaaaaaa:::::a  l::::l  e::::::eeeee:::::eew:::::w       w:::::::w       w:::::w   i::::in::::::::::::::nn  d::::::::::::::::d 
-        T:::::T                 a::::a  l::::l e::::::e     e:::::e w:::::w     w:::::::::w     w:::::w    i::::inn:::::::::::::::nd:::::::ddddd:::::d 
-        T:::::T          aaaaaaa:::::a  l::::l e:::::::eeeee::::::e  w:::::w   w:::::w:::::w   w:::::w     i::::i  n:::::nnnn:::::nd::::::d    d:::::d 
-        T:::::T        aa::::::::::::a  l::::l e:::::::::::::::::e    w:::::w w:::::w w:::::w w:::::w      i::::i  n::::n    n::::nd:::::d     d:::::d 
-        T:::::T       a::::aaaa::::::a  l::::l e::::::eeeeeeeeeee      w:::::w:::::w   w:::::w:::::w       i::::i  n::::n    n::::nd:::::d     d:::::d 
-        T:::::T      a::::a    a:::::a  l::::l e:::::::e                w:::::::::w     w:::::::::w        i::::i  n::::n    n::::nd:::::d     d:::::d 
-      TT:::::::TT    a::::a    a:::::a l::::::le::::::::e                w:::::::w       w:::::::w        i::::::i n::::n    n::::nd::::::ddddd::::::dd
-      T:::::::::T    a:::::aaaa::::::a l::::::l e::::::::eeeeeeee         w:::::w         w:::::w         i::::::i n::::n    n::::n d:::::::::::::::::d
-      T:::::::::T     a::::::::::aa:::al::::::l  ee:::::::::::::e          w:::w           w:::w          i::::::i n::::n    n::::n  d:::::::::ddd::::d
-      TTTTTTTTTTT      aaaaaaaaaa  aaaallllllll    eeeeeeeeeeeeee           www             www           iiiiiiii nnnnnn    nnnnnn   ddddddddd   ddddd
-                                                                                                                                                       
-                                                                                                                                                       
-Developed by Vasu Jain and Anand Chauhan, Version 1.0. May, 2023.""")
+                                                                                                                                                         
+                                                                                                                                                 dddddddd
+         tttt                            lllllll                                                              iiii                               d::::::d
+      ttt:::t                            l:::::l                                                             i::::i                              d::::::d
+      t:::::t                            l:::::l                                                              iiii                               d::::::d
+      t:::::t                            l:::::l                                                                                                 d:::::d 
+ttttttt:::::ttttttt      aaaaaaaaaaaaa    l::::l     eeeeeeeeeeee  wwwwwww           wwwww           wwwwwwwiiiiiiinnnn  nnnnnnnn        ddddddddd:::::d 
+t:::::::::::::::::t      a::::::::::::a   l::::l   ee::::::::::::ee w:::::w         w:::::w         w:::::w i:::::in:::nn::::::::nn    dd::::::::::::::d 
+t:::::::::::::::::t      aaaaaaaaa:::::a  l::::l  e::::::eeeee:::::eew:::::w       w:::::::w       w:::::w   i::::in::::::::::::::nn  d::::::::::::::::d 
+tttttt:::::::tttttt               a::::a  l::::l e::::::e     e:::::e w:::::w     w:::::::::w     w:::::w    i::::inn:::::::::::::::nd:::::::ddddd:::::d 
+      t:::::t              aaaaaaa:::::a  l::::l e:::::::eeeee::::::e  w:::::w   w:::::w:::::w   w:::::w     i::::i  n:::::nnnn:::::nd::::::d    d:::::d 
+      t:::::t            aa::::::::::::a  l::::l e:::::::::::::::::e    w:::::w w:::::w w:::::w w:::::w      i::::i  n::::n    n::::nd:::::d     d:::::d 
+      t:::::t           a::::aaaa::::::a  l::::l e::::::eeeeeeeeeee      w:::::w:::::w   w:::::w:::::w       i::::i  n::::n    n::::nd:::::d     d:::::d 
+      t:::::t    tttttta::::a    a:::::a  l::::l e:::::::e                w:::::::::w     w:::::::::w        i::::i  n::::n    n::::nd:::::d     d:::::d 
+      t::::::tttt:::::ta::::a    a:::::a l::::::le::::::::e                w:::::::w       w:::::::w        i::::::i n::::n    n::::nd::::::ddddd::::::dd
+      tt::::::::::::::ta:::::aaaa::::::a l::::::l e::::::::eeeeeeee         w:::::w         w:::::w         i::::::i n::::n    n::::n d:::::::::::::::::d
+        tt:::::::::::tt a::::::::::aa:::al::::::l  ee:::::::::::::e          w:::w           w:::w          i::::::i n::::n    n::::n  d:::::::::ddd::::d
+          ttttttttttt    aaaaaaaaaa  aaaallllllll    eeeeeeeeeeeeee           www             www           iiiiiiii nnnnnn    nnnnnn   ddddddddd   ddddd
+                                                                                                                                                         
+                                                                                                                                                         
+                                                                                                                                                         
+Developed by Vasu Jain and Anand Chauhan, Version 1.0. May, 2023.
+
+""")
 
 origins = [
     "http://localhost.tiangolo.com",
