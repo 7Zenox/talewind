@@ -42,6 +42,28 @@
 
         tensorboard --logdir ./AI/logs/fit
 
-* The requirements to run the backend can be found inside [this folder](./backend/). [NEEDS UPDATE FOR DJANGO]
+* The requirements to run the backend can be found inside [this folder](./backend/).
   
-* While the whole project is currently being deployed on Vercel, it is highly experimental and needs a modest amount of work on the backend and frontend to come to completion.
+* While the whole project is currently being deployed on Vercel, it is highly experimental and needs a modest amount of work on the backend and frontend to come to completion. UPDATE: The backend could not be deployed to Vercel as the size of the dependencies was too high for the platform. We will look into hosting using AWS/Heroku if the project ends up gaining enough traction among peers/professors.
+
+## `INSTRUCTIONS`
+
+1. To try running the entire app yourself, make sure you have all the dependencies installed. The dependencies for frontend can be installed by running in the FRONTEND folder:
+
+        npm install next react react-dom
+
+2. And run the following command to install the dependencies for the backend.
+
+        pip install -r ./backend/requirements.txt
+
+3. Next, open two terminal windows. Run the command to start the backend server as follows.
+
+        cd ./backend
+        uvicorn app:app --port 3030
+
+4. And run the following for the frontend server.
+
+        cd ./ frontend
+        npm run dev
+
+5. Visit [localhost:3000](http://localhost:3000) and you should see the frontend of the website.
