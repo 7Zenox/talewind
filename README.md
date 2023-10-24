@@ -4,6 +4,13 @@
 
     - 29/04/2023: The whole thing will be rebuilt using better datasets and advanced models.
     - 03/05/2023: The new models are fully complete. The backend and frontend remain.
+    - 04/05/2023: Version 1.0 is finally ready.
+
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh; position: fixed; top: 0; left: 0; width: 100%;">
+  <img src="https://user-images.githubusercontent.com/91457798/236125811-6f3ae130-be4e-4149-8226-190c3582ce95.gif" alt="talewind" width="800" height="450" style="display: block;">
+</div>
+
 
 ## `COMPONENTS`
 
@@ -50,7 +57,7 @@
 
 1. To try running the entire app yourself, make sure you have all the dependencies installed. The dependencies for frontend can be installed by running in the FRONTEND folder:
 
-        npm install next react react-dom
+        npm install next react react-dom axios
 
 2. And run the following command to install the dependencies for the backend.
 
