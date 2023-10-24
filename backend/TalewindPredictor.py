@@ -1,7 +1,7 @@
 import pickle
 import numpy as np
-import tensorflow as tf
 import spacy
+import tensorflow as tf
 from sentence_transformers import SentenceTransformer
 from nltk.tokenize import PunktSentenceTokenizer as pkt
 
